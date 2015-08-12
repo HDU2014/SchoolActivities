@@ -118,7 +118,7 @@ public class SearchFragment extends Fragment implements ISearchView{
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-
+        //recyclerview初始化
         recyclerView.setHasFixedSize(true);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
