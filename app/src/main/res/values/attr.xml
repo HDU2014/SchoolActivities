@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomBottom">
+        <attr name="micon" format="reference"/>
+        <attr name="mcolor" format="color"/>
+        <attr name="mtext" format="string"/>
+        <attr name="mtext_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+
+</resources>
