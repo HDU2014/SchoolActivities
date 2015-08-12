@@ -18,7 +18,7 @@
     <LinearLayout
         android:id="@+id/linearlayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@drawable/custombottom_bg"
         android:layout_alignParentBottom="true">
@@ -71,17 +71,18 @@
             app:micon="@drawable/custombottom_me"
             />
     </LinearLayout>
+
     <ImageButton
         android:id="@+id/newEvent"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="3dp"
         android:background="@drawable/button_round"
         android:src="@drawable/plus"
-        android:scaleType="centerCrop"
-        android:padding="26dp"/>
+        android:scaleType="fitCenter"
+        android:padding="20dp"/>
 
 
 </RelativeLayout>

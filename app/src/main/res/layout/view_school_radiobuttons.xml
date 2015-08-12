@@ -2,7 +2,9 @@
 <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:scrollbarSize="2dp"
+    android:scrollbarSize="1dp"
+    android:scrollbarDefaultDelayBeforeFade="@integer/abc_config_activityShortDur"
+    android:scrollbarStyle="outsideInset"
     android:visibility="gone">
 
     <RadioGroup
@@ -11,60 +13,38 @@
         android:orientation="horizontal">
         <RadioButton
             android:id="@+id/schoolall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="不限"
-            android:textSize="20sp"
-            android:layout_margin="8dp"
             android:checked="true"/>
         <RadioButton
             android:id="@+id/hangdian"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="杭电"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+           />
         <RadioButton
             android:id="@+id/ligong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="理工"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+         />
         <RadioButton
             android:id="@+id/jiliang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="计量"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+            />
         <RadioButton
             android:id="@+id/hangshi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="杭师"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+         />
         <RadioButton
             android:id="@+id/gongshang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="工商"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+            />
         <RadioButton
             android:id="@+id/chuanmei"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radio"
+            style="RadioButton"
             android:text="传媒"
-            android:textSize="20sp"
-            android:layout_margin="8dp"/>
+            />
     </RadioGroup>
 </HorizontalScrollView>

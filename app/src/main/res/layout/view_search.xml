@@ -6,8 +6,8 @@
     android:background="@drawable/search_bg"
     android:layout_margin="3dp">
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:padding="2dp"
         android:layout_gravity="center_vertical"
         android:src="@drawable/search_image"/>
@@ -21,7 +21,7 @@
         android:imeOptions="actionSearch"
         android:singleLine="true"
         android:background="@null"
-        android:textSize="25sp"/>
+        android:textSize="20sp"/>
     <ImageView
         android:id="@+id/clearButton"
         android:layout_width="40dp"
