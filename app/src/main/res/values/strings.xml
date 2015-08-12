@@ -27,5 +27,19 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_want_regist">我要注册</string>
+    <string name="login">登陆</string>
+    <string name="use_account_login">使用账号登陆</string>
+    <string name="phoneNumber">手机号</string>
+    <string name="password">密码</string>
+    <string name="forgetpassword">忘记密码</string>
+    <string name="usethirdaccount">使用合作账号登陆</string>
+    <string name="weixin">微信</string>
+    <string name="weibo">微博</string>
+    <string name="i_have_account">我已有账号</string>
+    <string name="regist">注册</string>
+    <string name="getYZM">获取验证码</string>
+    <string name="YZM">验证码</string>
+    <string name="setpassword">设置密码</string>
 
 </resources>

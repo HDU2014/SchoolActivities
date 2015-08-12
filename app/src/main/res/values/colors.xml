@@ -7,5 +7,11 @@
     <color name="type_bg">#FF29C270</color>
     <color name="time_bg">#FF12B5B0</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#d2d2d2d2</color>
+    <color name="black">#000000</color>
+    <color name="regist">#33be31</color>
+    <color name="btn_login_normal">#a8ced0d2</color>
+    <color name="btn_login_pressed">#33b231</color>
+    <color name="btn_login_unpressed">#33d933</color>
 
 </resources>

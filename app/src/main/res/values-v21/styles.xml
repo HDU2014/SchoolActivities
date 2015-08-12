@@ -2,6 +2,9 @@
 <resources>
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:navigationBarColor">@color/status_bar</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
     </style>
 
 </resources>

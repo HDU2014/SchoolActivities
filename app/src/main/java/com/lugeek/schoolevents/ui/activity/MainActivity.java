@@ -67,6 +67,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 //通过打Log找规律得到，position总是指向左边的tab
+                //
                 if (positionOffset > 0) {
                     CustomBottom left = tabs.get(position);
                     CustomBottom right = tabs.get(position + 1);
