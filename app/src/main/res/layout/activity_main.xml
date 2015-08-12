@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/linearlayout">
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custombottom_bg"
+        android:layout_alignParentBottom="true">
+        <com.lugeek.schoolevents.ui.widget.CustomBottom
+            android:id="@+id/office_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:mtext="@string/office"
+            app:mtext_size="12sp"
+            app:mcolor="@color/tab"
+            app:micon="@drawable/custombottom_office"
+            />
+        <com.lugeek.schoolevents.ui.widget.CustomBottom
+            android:id="@+id/personal_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:mtext="@string/personal"
+            app:mtext_size="12sp"
+            app:mcolor="@color/tab"
+            app:micon="@drawable/custombottom_personal"
+            />
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <com.lugeek.schoolevents.ui.widget.CustomBottom
+            android:id="@+id/message_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:mtext="@string/message"
+            app:mtext_size="12sp"
+            app:mcolor="@color/tab"
+            app:micon="@drawable/custombottom_message"
+            />
+        <com.lugeek.schoolevents.ui.widget.CustomBottom
+            android:id="@+id/me_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:mtext="@string/me"
+            app:mtext_size="12sp"
+            app:mcolor="@color/tab"
+            app:micon="@drawable/custombottom_me"
+            />
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/newEvent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/button_round"
+        android:src="@drawable/plus"
+        android:scaleType="centerCrop"
+        android:padding="26dp"/>
+
+
+</RelativeLayout>

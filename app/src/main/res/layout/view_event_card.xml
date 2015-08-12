@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/article_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="0dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/search_image" />
+
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_image"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="骑行下沙啊啊骑行下骑行" />
+
+        <TextView
+            android:id="@+id/event_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_image"
+            android:layout_below="@+id/event_title"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="#77000000"
+            android:text="时间：8月10日13:00" />
+
+        <TextView
+            android:id="@+id/event_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_time"
+            android:layout_below="@+id/event_title"
+            android:layout_marginTop="12dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="#77000000"
+            android:text="地点：杭州电子科技大学啊啊" />
+
+        <TextView
+            android:id="@+id/event_persons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_image"
+            android:layout_below="@+id/event_time"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="#77000000"
+            android:text="6人已参加" />
+
+        <TextView
+            android:id="@+id/event_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/event_address"
+            android:layout_below="@+id/event_time"
+            android:layout_marginTop="12dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="#77000000"
+            android:text="去报名" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/listDivider"/>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">校园活动</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="office">官方</string>
+    <string name="personal">个人</string>
+    <string name="message">消息</string>
+    <string name="me">我的</string>
+    <string name="sousuo">搜索</string>
+    <string name="school">学校</string>
+    <string name="type">类型</string>
+    <string name="time">时间</string>
+    <string-array name="schools">
+        <item>杭电</item>
+        <item>理工</item>
+        <item>计量</item>
+        <item>杭师</item>
+        <item>工商</item>
+        <item>传媒</item>
+        <item>不限</item>
+    </string-array>
+    <string-array name="pagename">
+        <item>官方活动</item>
+        <item>个人活动</item>
+        <item>消息</item>
+        <item>我的</item>
+    </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
