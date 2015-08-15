@@ -1,6 +1,7 @@
 package com.lugeek.schoolevents.officeevents.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.lugeek.schoolevents.R;
 import com.lugeek.schoolevents.officeevents.bean.Event;
+import com.lugeek.schoolevents.ui.activity.SecondActivity;
 import com.lugeek.schoolevents.utils.mylog.mylog;
 import com.squareup.picasso.Picasso;
 
@@ -64,7 +66,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         @Override
         public void onClick(View v) {
-            mylog.toast(context, "点击");
+            Intent intent = new Intent(context, SecondActivity.class);
+            intent.putExtra("data", events.get(getLayoutPosition()));
+            intent.putExtra("todo", "eventdetail");
+            context.startActivity(intent);
         }
     }
 }

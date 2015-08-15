@@ -1,9 +1,12 @@
 package com.lugeek.schoolevents.officeevents.bean;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by lugeek on 2015/8/9.
  */
-public class Event {
+public class Event implements Parcelable{
     private String imageUrl;
     private String title;
     private String organizer;
@@ -11,9 +14,11 @@ public class Event {
     private String address;
     private int fans;
     private int participants;
+    private int allNum;
     private String describe;
     private boolean needSignup;
-    private boolean isJoin;
+
+
 
     public String getImageUrl() {
         return imageUrl;
@@ -71,6 +76,14 @@ public class Event {
         this.participants = participants;
     }
 
+    public int getAllNum() {
+        return allNum;
+    }
+
+    public void setAllNum(int allNum) {
+        this.allNum = allNum;
+    }
+
     public String getDescribe() {
         return describe;
     }
@@ -87,11 +100,46 @@ public class Event {
         this.needSignup = needSignup;
     }
 
-    public boolean isJoin() {
-        return isJoin;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public void setJoin(boolean isJoin) {
-        this.isJoin = isJoin;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        //按成员变量声明顺序
+        dest.writeString(imageUrl);
+        dest.writeString(title);
+        dest.writeString(organizer);
+        dest.writeString(time);
+        dest.writeString(address);
+        dest.writeInt(fans);
+        dest.writeInt(participants);
+        dest.writeInt(allNum);
+        dest.writeString(describe);
+        dest.writeInt(needSignup?1:0);
     }
+
+    public static final Parcelable.Creator<Event> CREATOR = new Creator<Event>() {
+        @Override
+        public Event createFromParcel(Parcel source) {
+            Event e = new Event();
+            e.setImageUrl(source.readString());
+            e.setTitle(source.readString());
+            e.setOrganizer(source.readString());
+            e.setTime(source.readString());
+            e.setAddress(source.readString());
+            e.setFans(source.readInt());
+            e.setParticipants(source.readInt());
+            e.setAllNum(source.readInt());
+            e.setDescribe(source.readString());
+            e.setNeedSignup(source.readInt()==1);
+            return e;
+        }
+
+        @Override
+        public Event[] newArray(int size) {
+            return new Event[size];
+        }
+    };
 }

@@ -1,4 +1,4 @@
-package com.lugeek.schoolevents.ui.fragment;
+package com.lugeek.schoolevents.searchevents.view;
 
 
 import android.app.Activity;
@@ -24,10 +24,15 @@ import android.widget.Toast;
 
 import com.lugeek.schoolevents.R;
 import com.lugeek.schoolevents.officeevents.adapter.MyAdapter;
+import com.lugeek.schoolevents.officeevents.bean.Event;
 import com.lugeek.schoolevents.officeevents.bean.Events;
+import com.lugeek.schoolevents.searchevents.bean.SearchEvents;
 import com.lugeek.schoolevents.searchevents.presenter.SearchPresenter;
 import com.lugeek.schoolevents.searchevents.view.ISearchView;
 import com.lugeek.schoolevents.utils.mylog.mylog;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -71,6 +76,12 @@ public class SearchFragment extends Fragment implements ISearchView{
         initView();
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        SearchEvents.getInstance().none();
+    }
+
     public void initView(){
         //EditText字符变动监听器
         searchEditText.addTextChangedListener(new TextWatcher() {
@@ -103,6 +114,7 @@ public class SearchFragment extends Fragment implements ISearchView{
                         Toast.makeText(getActivity(), "搜索内容不能为空", Toast.LENGTH_SHORT).show();
                         return true;
                     }
+                    SearchEvents.getInstance().removeAll();
                     search(searchEditText.getText().toString());
                     hideIme();
                     handled = true;
@@ -122,7 +134,7 @@ public class SearchFragment extends Fragment implements ISearchView{
         recyclerView.setHasFixedSize(true);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
-        myAdapter = new MyAdapter(getActivity(), Events.getInstance().setTestEvents());
+        myAdapter = new MyAdapter(getActivity(), SearchEvents.getInstance().getEvents());
         recyclerView.setAdapter(myAdapter);
 
     }

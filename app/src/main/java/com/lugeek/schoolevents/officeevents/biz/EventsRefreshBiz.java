@@ -26,10 +26,14 @@ public class EventsRefreshBiz {
                     Event event = new Event();
                     event.setImageUrl("http://7xiq48.com1.z0.glb.clouddn.com/article/drjh.jpg");
                     event.setTitle("刷新的活动"+i);
+                    event.setOrganizer("主办方：外星人");
                     event.setTime("时间：8月30日1:11");
-                    event.setAddress("地球");
+                    event.setAddress("地点：地球");
                     event.setParticipants(100);
+                    event.setFans(2);
                     event.setNeedSignup(false);
+                    event.setDescribe("受死吧！地球人！" +"\n"+
+                            "哈哈哈～～～～～");
                     newEvents.add(event);
                 }
                 Events.getInstance().addList(newEvents);

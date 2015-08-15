@@ -2,6 +2,7 @@ package com.lugeek.schoolevents.searchevents.biz;
 
 import com.lugeek.schoolevents.officeevents.bean.Event;
 import com.lugeek.schoolevents.officeevents.bean.Events;
+import com.lugeek.schoolevents.searchevents.bean.SearchEvents;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +27,12 @@ public class SearchBiz {
                     event.setImageUrl("http://7xiq48.com1.z0.glb.clouddn.com/article/drjh.jpg");
                     event.setTitle("搜到的活动"+i);
                     event.setTime("时间：8月30日1:11");
-                    event.setAddress("地球");
+                    event.setAddress("地点：地球");
                     event.setParticipants(100);
                     event.setNeedSignup(false);
                     newEvents.add(event);
                 }
-                Events.getInstance().addList(newEvents);
+                SearchEvents.getInstance().addList(newEvents);
                 iSearchResult.searchSuccess();
             }
         }).start();

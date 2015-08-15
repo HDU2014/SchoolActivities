@@ -1,4 +1,4 @@
-package com.lugeek.schoolevents.ui.fragment;
+package com.lugeek.schoolevents.officeevents.view;
 
 
 import android.content.Intent;

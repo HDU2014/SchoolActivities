@@ -6,15 +6,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.lugeek.schoolevents.R;
-import com.lugeek.schoolevents.ui.fragment.OfficeFragment;
+import com.lugeek.schoolevents.officeevents.view.OfficeFragment;
 import com.lugeek.schoolevents.ui.fragment.TestFragment;
 import com.lugeek.schoolevents.ui.widget.CustomBottom;
-import com.lugeek.schoolevents.utils.mylog.mylog;
 
 import java.util.ArrayList;
 import java.util.List;
